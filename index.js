@@ -1,4 +1,40 @@
 const inquirer = require('inquirer');
+const fs = require("fs");
+
+const generateHTML = (response) =>
+`# ${response.title}
+## Description
+${response.description}
+
+## Table of Contents
+- [Installation](#install)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation(#install)
+To install the necessay dependencies, run the following command:
+\`\`\`
+${response.dependency}
+\`\`\`
+## Usage
+${response.usage}
+
+## License
+${response.license}
+
+## Contributing
+${response.contributions}
+
+## Tests
+\`\`\`
+${response.test}
+\`\`\`
+## Questions
+If you have any questions about the repo, open an issue or contact me directly at ${response.email}. You can find more of my work at [${response.username}](${"htpps://github.com/" + response.username})
+`;
 
 inquirer
   .prompt([
@@ -31,17 +67,17 @@ inquirer
     {
       type: 'input',
       message: 'What kind of license should be run to install independencies?',
-      name: 'x',
+      name: 'dependency',
     },
     {
       type: 'input',
       message: 'What command should be run to run tests?',
-      name: 'y',
+      name: 'test',
     },
     {
       type: 'input',
       message: 'What does the user need to know about the repo?',
-      name: 'knowledge',
+      name: 'usage',
     },
     {
       type: 'input',
@@ -50,6 +86,9 @@ inquirer
     },
   ])
   .then((response) => {
-    console.log(response)
-  }
-  );
+    const htmlPageContent = generateHTML(response);
+
+    fs.writeFile('README2.md', htmlPageContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created index.html!')
+    );
+  });

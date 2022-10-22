@@ -1,19 +1,14 @@
 {
-  "name": "readme-generator",
+  "name": "static-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/turtle2001/readme-generator.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/turtle2001/readme-generator/issues"
-  },
-  "homepage": "https://github.com/turtle2001/readme-generator#readme"
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
 }
