@@ -1,32 +1,32 @@
-# e
+# readme generator
 ## Description
-r
+generates readme
 
 ## Table of Contents
-- [Installation](#install)
+- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
-## Installation(#install)
+## Installation
 To install the necessay dependencies, run the following command:
 ```
-s
+npm i
 ```
 ## Usage
-d
+have fun
 
 ## License
-MIT
+None
 
 ## Contributing
-f
+go
 
 ## Tests
 ```
-s
+npm test
 ```
 ## Questions
-If you have any questions about the repo, open an issue or contact me directly at w. You can find more of my work at [q](github.com/q)
+If you have any questions about the repo, open an issue or contact me directly at alexis.oakland21@gmail.com. You can find more of my work at [turtle2001](htpps://github.com/turtle2001)

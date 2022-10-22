@@ -1,20 +1,20 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
 
-const generateHTML = (response) =>
+const generateMD = (response) =>
 `# ${response.title}
 ## Description
 ${response.description}
 
 ## Table of Contents
-- [Installation](#install)
+- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
-## Installation(#install)
+## Installation
 To install the necessay dependencies, run the following command:
 \`\`\`
 ${response.dependency}
@@ -86,9 +86,9 @@ inquirer
     },
   ])
   .then((response) => {
-    const htmlPageContent = generateHTML(response);
+    const markdown = generateMD(response);
 
-    fs.writeFile('README2.md', htmlPageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
+    fs.writeFile('README2.md', markdown, (err) =>
+      err ? console.log(err) : console.log('Successfully created README2.md!')
     );
   });
